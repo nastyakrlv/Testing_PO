@@ -1,0 +1,75 @@
+@import '../../../../colors.scss';
+@import '../../../../constants.scss';
+
+:host {
+  height: 100%;
+  display: block;
+  background: -webkit-linear-gradient(
+    270deg,
+    rgb(252, 253, 255) 98%,
+    rgb(247, 247, 247)
+  );
+  background: -moz-linear-gradient(
+    270deg,
+    rgb(252, 253, 255) 98%,
+    rgb(247, 247, 247)
+  );
+  background: linear-gradient(
+    270deg,
+    rgb(252, 253, 255) 98%,
+    rgb(247, 247, 247)
+  );
+
+  @media screen and (max-width: $mobile) {
+    height: calc(100% - 56px);
+  }
+}
+
+.profile-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 0;
+    padding: 30px 35px;
+  
+    @media screen and (max-width: 768px) {
+      padding: 30px 16px;
+  }
+  }
+  
+  div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  
+    button {
+      width: 80%;
+    }
+  }
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  tui-input {
+    width: 100%;
+  }
+
+  .error {
+    height: 20px;
+  }
+
+  small {
+    color: red;
+  }
+}

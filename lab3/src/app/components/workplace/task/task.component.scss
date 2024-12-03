@@ -1,0 +1,46 @@
+@import '../../../../colors.scss';
+
+:host {
+  flex: 1;
+  height: 100%;
+  display: block;
+  background: -webkit-linear-gradient(
+    270deg,
+    rgb(252, 253, 255) 98%,
+    rgb(247, 247, 247)
+  );
+  background: -moz-linear-gradient(
+    270deg,
+    rgb(252, 253, 255) 98%,
+    rgb(247, 247, 247)
+  );
+  background: linear-gradient(
+    270deg,
+    rgb(252, 253, 255) 98%,
+    rgb(247, 247, 247)
+  );
+}
+
+.loader {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .task-container {
+    background-color: $background-color-yellow;
+    border-radius: 29px;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+  }
+}

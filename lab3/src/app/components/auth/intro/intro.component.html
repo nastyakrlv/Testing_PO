@@ -1,0 +1,64 @@
+<div tuiCarouselButtons class="wrapper">
+  <button
+    iconStart="@tui.chevron-left"
+    tuiIconButton
+    type="button"
+    class="navigation"
+    (click)="carousel.prev()"
+  >
+    Previous
+  </button>
+  <tui-carousel #carousel class="carousel" [(index)]="index">
+    <div *tuiItem class="item">
+      <img src="img/intro-1.svg" />
+      <p>Управляйте своими задачами</p>
+      <small
+        >Добавляйте, редактируйте и удаляйте задачи. Устанавливайте
+        сроки, чтобы не забыть важное</small
+      >
+    </div>
+    <div *tuiItem class="item">
+      <img src="img/intro-2.svg" />
+      <p>Работайте в общих проектах</p>
+      <small
+        >Делитесь списками задач с другими пользователями. Это упростит совместную работу и
+        поможет организовать проект</small
+      >
+    </div>
+    <div *tuiItem class="item">
+      <img src="img/intro-3.svg" />
+      <p>Организуйте свои задачи</p>
+      <small
+        >Разбивайте задачи на категории для удобства. Это поможет лучше
+        управлять делами и быстро находить нужные задачи</small
+      >
+    </div>
+    <div *tuiItem class="item" [style.text-align]="'center'">
+      <p>
+        Пожалуйста, войдите в свою учетную запись или создайте новую, чтобы
+        продолжить
+      </p>
+      <a [routerLink]="['login']">
+        <button tuiButton appearance="primary">Войти</button>
+      </a>
+      <a [routerLink]="['register']">
+        <button tuiButton>Зарегистрироваться</button>
+      </a>
+    </div>
+  </tui-carousel>
+  <button
+    iconStart="@tui.chevron-right"
+    tuiIconButton
+    type="button"
+    (click)="carousel.next()"
+    class="navigation"
+  >
+    Next
+  </button>
+</div>
+<tui-pagination
+  size="s"
+  class="tui-space_top-4"
+  [length]="4"
+  [(index)]="index"
+/>
